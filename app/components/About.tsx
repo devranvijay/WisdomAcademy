@@ -4,7 +4,7 @@ const ABOUT_IMAGE_URL =
   "https://lh3.googleusercontent.com/aida-public/AB6AXuAUKYt3092c9iHTt8wS46FaakLeaAL7edx3YxOaxiezDxiE15ed-Elfefw6q6dbBGtSUgMomMAFSMjojIQt3eklhCWnKr2YVyahc-QJ9YbD1y57FVuRwGWU8Vq64z7klke25UF01CZlI6GtDz8agFSGHxLtqp-qRQejaJcUvxmXv3plNMK1SiW043TNHcVKK8YWaCjpt_7LvDntk2My7fEorQtYcuEBv3UuHbuR8OqlYN07m_0b4VUvoeKIFY26A_lwLlKR2uRw940Q";
 
 const milestones = [
-  { heading: "2014", text: "Founded with a vision to provide quality coaching." },
+  { heading: "2019", text: "Founded with a vision to provide quality coaching." },
   { heading: "Expert Faculty", text: "Handpicked educators with decades of combined experience." },
   { heading: "95% Repeat Rate", text: "Siblings of alumni consistently choose us for their education." },
 ];

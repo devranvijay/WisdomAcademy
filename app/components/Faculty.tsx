@@ -4,7 +4,7 @@ const vikasSir = {
   title: "Founder & Head Faculty",
   subjects: ["Mathematics", "Science"],
   experience: "10+ Years",
-  bio: "Vikas Sir founded Wisdom Academy in 2014 with one goal — to make quality coaching genuinely accessible. His teaching style deconstructs complex concepts into clear, memorable frameworks that work for every learning pace. With a Master's in Mathematics and a decade in the classroom, he has personally guided over 1,000 students to their best scores.",
+  bio: "Vikas Sir founded Wisdom Academy in 2019 with one goal — to make quality coaching genuinely accessible. His teaching style deconstructs complex concepts into clear, memorable frameworks that work for every learning pace. With a Master's in Mathematics and a decade in the classroom, he has personally guided over 1,000 students to their best scores.",
   specialties: ["Conceptual Clarity", "Board Exam Strategy", "Doubt Clearing Sessions", "Foundation to Advanced"],
   stats: [
     { value: "1000+", label: "Students Guided" },
