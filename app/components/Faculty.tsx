@@ -8,7 +8,7 @@ const vikasSir = {
   specialties: ["Conceptual Clarity", "Board Exam Strategy", "Doubt Clearing Sessions", "Foundation to Advanced"],
   stats: [
     { value: "1000+", label: "Students" },
-    { value: "90%",   label: "Pass Rate" },
+    { value: "100%",  label: "Pass Rate" },
     { value: "10+",   label: "Yrs Teaching" },
   ],
 };

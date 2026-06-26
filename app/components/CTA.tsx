@@ -12,7 +12,7 @@ export default function CTA() {
           </div>
 
           <h2 className="font-display-hero text-display-hero-mobile md:text-headline-lg text-white">
-            Admissions Open for 2024–25
+            Admissions Open for 2026–27
           </h2>
           <p
             className="font-body-lg text-body-lg text-primary-fixed mx-auto"

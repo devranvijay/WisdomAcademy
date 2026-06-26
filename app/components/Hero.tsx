@@ -5,7 +5,7 @@ const HERO_IMAGE_URL =
 
 const stats = [
   { value: "500+", label: "Students", colorClass: "text-primary" },
-  { value: "90%", label: "Success", colorClass: "text-tertiary" },
+  { value: "100%", label: "Success", colorClass: "text-tertiary" },
   { value: "10+", label: "Years", colorClass: "text-on-surface" },
 ];
 
