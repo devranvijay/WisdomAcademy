@@ -13,7 +13,7 @@ const testimonials = [
     role: "Student · 6 months ago",
     color: "bg-tertiary text-white",
     quote:
-      "The classes have genuinely helped me improve because the sir focuses on every single student, not just the top performers. He explains concepts clearly, notices where each child struggles, and makes sure no one is left behind. The teaching style is structured, practical, and effective — it actually leads to real improvement.",
+      "The classes have genuinely helped me improve because the sir focuses on every single student, not just the top performers. He explains concepts clearly, notices where each child struggles, and makes sure no one is left behind.",
   },
   {
     initials: "AS",
@@ -29,7 +29,7 @@ const testimonials = [
     role: "Parent · 2 years ago",
     color: "bg-secondary text-white",
     quote:
-      "I appreciate the efforts Vikas Sir takes for lectures and extra initiative to explain and make sure the student understood everything. Good coaching and ambience to make students comfortable to learn accurately. I'm happy to send my child for studying in his coaching classes.",
+      "I appreciate the efforts Vikas Sir takes for lectures and extra initiative to explain and make sure the student understood everything. Good coaching and ambience to make students comfortable to learn accurately.",
   },
 ];
 
@@ -39,7 +39,7 @@ function Stars() {
       {Array.from({ length: 5 }).map((_, i) => (
         <span
           key={i}
-          className="material-symbols-outlined text-[18px]"
+          className="material-symbols-outlined text-[16px]"
           style={{ fontVariationSettings: "'FILL' 1" }}
         >
           star
@@ -59,9 +59,8 @@ export default function Testimonials() {
           <h2 className="font-headline-lg text-headline-lg text-on-surface">
             What Our Students Say
           </h2>
-          {/* Google rating badge — no count */}
           <div className="inline-flex items-center gap-sm bg-white border border-outline-variant/30 rounded-full px-lg py-sm shadow-sm">
-            <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg viewBox="0 0 24 24" className="w-4 h-4 flex-shrink-0" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
               <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
               <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
@@ -70,31 +69,39 @@ export default function Testimonials() {
             <span className="font-headline-sm text-headline-sm text-on-surface font-bold">5.0</span>
             <div className="flex gap-xs text-tertiary">
               {Array.from({ length: 5 }).map((_, i) => (
-                <span key={i} className="material-symbols-outlined text-[14px]" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
+                <span key={i} className="material-symbols-outlined text-[12px]" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
               ))}
             </div>
             <span className="font-label-md text-label-md text-on-surface-variant">Google Reviews</span>
           </div>
         </div>
 
-        {/* One horizontal row — scrolls on mobile, 4 columns on desktop */}
-        <div className="flex overflow-x-auto gap-lg pt-lg pb-sm no-scrollbar snap-x snap-mandatory lg:grid lg:grid-cols-4 lg:overflow-visible">
+        {/*
+          Scroll on mobile/tablet — solid white cards (no backdrop-filter = no lag).
+          Grid on lg+.
+          overscroll-x-contain stops vertical scroll chaining.
+        */}
+        <div
+          className="flex overflow-x-auto gap-md pt-lg pb-sm no-scrollbar snap-x snap-mandatory overscroll-x-contain lg:grid lg:grid-cols-4 lg:overflow-visible lg:gap-lg"
+          style={{ WebkitOverflowScrolling: "touch" }}
+        >
           {testimonials.map(({ initials, name, role, color, quote }, i) => (
             <div
               key={name}
-              className="glass-card p-xl rounded-24 flex flex-col reveal snap-center flex-shrink-0 w-[300px] sm:w-[360px] lg:w-auto lg:flex-shrink"
+              className="bg-white border border-outline-variant/20 shadow-sm p-lg rounded-24 flex flex-col snap-start flex-shrink-0 w-[248px] sm:w-[300px] lg:w-auto reveal"
               style={{ transitionDelay: `${i * 100}ms` }}
             >
               <Stars />
-              <p className="font-body-md text-body-md text-on-surface-variant mb-xl italic flex-grow">
+              {/* Quote — clamp to 4 lines on mobile, unclamped on lg */}
+              <p className="font-body-md text-body-md text-on-surface-variant mb-lg italic flex-grow overflow-hidden" style={{ display: '-webkit-box', WebkitLineClamp: 5, WebkitBoxOrient: 'vertical', overflow: 'hidden' }}>
                 &ldquo;{quote}&rdquo;
               </p>
-              <div className="flex items-center gap-md">
-                <div className={`w-10 h-10 rounded-full ${color} flex items-center justify-center flex-shrink-0 font-semibold text-sm shadow-sm`}>
+              <div className="flex items-center gap-sm pt-md border-t border-outline-variant/10">
+                <div className={`w-8 h-8 rounded-full ${color} flex items-center justify-center flex-shrink-0 font-semibold text-xs`}>
                   {initials}
                 </div>
                 <div>
-                  <div className="font-label-md text-label-md text-on-surface font-semibold">{name}</div>
+                  <div className="font-label-md text-label-md text-on-surface font-semibold leading-tight">{name}</div>
                   <div className="font-label-sm text-label-sm text-on-surface-variant">{role}</div>
                 </div>
               </div>

@@ -46,14 +46,15 @@ export default function Hero() {
       <div className="max-w-container-max mx-auto grid md:grid-cols-2 gap-xxl items-center">
         {/* ── Left: Text Content ── */}
         <div className="space-y-xl">
-          <div className="inline-flex items-center gap-sm bg-primary-fixed/30 text-primary px-md py-xs rounded-full font-label-md text-label-md">
-            <span
-              className="material-symbols-outlined text-[18px]"
-              style={{ fontVariationSettings: "'FILL' 1" }}
-            >
-              stars
-            </span>
-            Top Rated Coaching in Mumbai
+          <div className="flex flex-wrap gap-sm">
+            <div className="inline-flex items-center gap-sm bg-primary-fixed/30 text-primary px-md py-xs rounded-full font-label-md text-label-md">
+              <span className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>stars</span>
+              Top Rated Coaching in Mumbai
+            </div>
+            <div className="inline-flex items-center gap-sm bg-[#16a34a]/10 text-[#16a34a] border border-[#16a34a]/25 px-md py-xs rounded-full font-label-md text-label-md">
+              <span className="material-symbols-outlined text-[16px]" style={{ fontVariationSettings: "'FILL' 1" }}>event_available</span>
+              Admissions Open · 2026–27
+            </div>
           </div>
 
           <h1 className="font-display-hero text-display-hero-mobile md:text-display-hero text-on-surface leading-none">
